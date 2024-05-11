@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div>    
+        <form id="Form_Tabla" class="visible">
+          <h2>Form Lista</h2>
+          <label>Filtrar por: </label>
+          <select id="filtro">
+            <option value="0">Todos</option>
+            <option value="1">Extranjeros</option>
+            <option value="2">Ciudadanos</option>
+          </select>
+          <br>
+          <label>Calcular Edad Promedio: </label>
+          <input type="text" id="edadPromedio" />
+          <button id="btnCalcular">Calcular</button>
+          <p>Mostrar Columnas:</p>
+          <input type="checkbox" id="col-id" checked />ID
+          <input type="checkbox" id="col-nombre" checked />Nombre
+          <input type="checkbox" id="col-apellido" checked />Apellido
+          <input type="checkbox" id="col-fechaNacimiento" checked />Fecha de nacimiento
+          <input type="checkbox" id="col-dni" checked />DNI
+          <input type="checkbox" id="col-paisOrigen" checked />Pais de origen
+          <table id="tablaUsuarios">
+              <thead>
+                <tr>
+                  <th id="th-id">ID</th>
+                  <th id="th-nombre">Nombre</th>
+                  <th id="th-apellido">Apellido</th>
+                  <th id="th-fechaNacimiento">Fecha de nacimiento</th>
+                  <th id="th-dni">Id</th>
+                  <th id="th-paisOrigen">Pais de origen</th>
+              </tr>
+              </thead>
+              <tbody>
+            
+              </tbody>
+          </table>
+        </form>
+    </div>
+
+    <div>
+        <form id="Form_ABM" class="hidden">
+          <h1>Formulario ABM</h1>
+          <label>ID: </label>
+          <input type="number" id="id" disabled/>
+          <br><br>
+          <label>Tipo: </label>
+          <select id="tipo">
+            <option value="ciudadano">Ciudadano</option>
+            <option value="extranjero">Extranjero</option>
+          </select>
+          <br><br>
+          <label>Nombre: </label>
+          <input type="text" id="nombre"  />
+          <br><br>
+          <label>Apellido: </label>
+          <input type="text" id="apellido"  />
+          <br><br>
+          <label>Fecha de nacimiento: </label>
+          <input type="number" id="fechaNacimiento"  />
+          <br><br>
+          <label>DNI: </label>
+          <input type="number" id="dni"  />
+          <br><br>
+          <label>Pais de origen: </label>
+          <input type="text" id="paisOrigen" />
+          <br><br>
+          <div class="botones-container">
+            <button id="btnAlta" class="hidden">Alta</button>
+            <button id="btnModificar" class="hidden">Modificar</button>
+            <button id="btnEliminar" class="hidden">Baja</button>
+            <button id="btnCancelar" class="hidden">Cancelar</button>
+          </div>
+        </form>
+    </div>
+    <button class="visible" id="btnAgregar">Agregar</button>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
+
